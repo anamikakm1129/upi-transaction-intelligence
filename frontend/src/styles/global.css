@@ -1,0 +1,130 @@
+:root {
+  /* Color Palette matching visual specifications */
+  --bg-page: #A180F8;
+  --surface-main: #F8F3EF;
+  --surface-card: #FFFFFF;
+  --surface-subtle: #F3ECE7;
+  --surface-hover: #FAF6F3;
+  
+  --primary: #8A63F4;
+  --primary-hover: #7347EE;
+  --primary-light: #B9A0F5;
+  --primary-tint: #F1ECFE;
+  
+  --text-main: #20201F;
+  --text-muted: #77736F;
+  --text-light: #A49F9B;
+  
+  --border-main: #ECE8E5;
+  --border-subtle: #E3DDD8;
+  --border-focus: #B9A0F5;
+  
+  /* Status Colors */
+  --status-success: #10B981;
+  --status-success-bg: #ECFDF5;
+  --status-failed: #EF4444;
+  --status-failed-bg: #FEF2F2;
+  --status-pending: #F59E0B;
+  --status-pending-bg: #FFFBEB;
+  --status-flagged: #8A63F4;
+  --status-flagged-bg: #F5F1FE;
+  
+  /* Typography Scale (Desktop Baseline) */
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', 'SF Mono', Consolas, monospace;
+  
+  --text-xs: 12px;       /* Absolute minimum for tooltips & secondary metadata */
+  --text-sm: 13.5px;     /* Small labels, tags, sub-metadata */
+  --text-base: 15px;     /* Standard body, inputs, table rows */
+  --text-md: 16px;       /* Prominent text, card labels */
+  --text-lg: 18px;       /* Card headers, modal titles */
+  --text-xl: 21px;       /* Section headings, hero titles */
+  --text-2xl: 28px;      /* Page main title */
+  --text-kpi: 34px;      /* Primary KPI values */
+  
+  /* Radii & Shadows */
+  --radius-xl: 24px;
+  --radius-lg: 18px;
+  --radius-md: 12px;
+  --radius-sm: 8px;
+  --radius-pill: 9999px;
+  
+  --shadow-sm: 0 1px 3px rgba(32, 32, 31, 0.04);
+  --shadow-card: 0 4px 20px rgba(32, 32, 31, 0.03), 0 1px 3px rgba(32, 32, 31, 0.02);
+  --shadow-hover: 0 8px 30px rgba(138, 99, 244, 0.08);
+  --shadow-modal: 0 25px 60px -15px rgba(32, 32, 31, 0.2);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: 1.5;
+  background-color: var(--surface-main);
+  color: var(--text-main);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D9D2CB;
+  border-radius: var(--radius-pill);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #BFB7AF;
+}
+
+/* Base utility classes */
+.mono {
+  font-family: var(--font-mono);
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  cursor: pointer;
+  background: none;
+  transition: all 0.2s ease;
+}
+
+input, select, textarea {
+  font-family: inherit;
+  border: 1px solid var(--border-main);
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: var(--border-focus);
+  box-shadow: 0 0 0 3px rgba(185, 160, 245, 0.25);
+}
+
